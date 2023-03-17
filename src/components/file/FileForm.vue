@@ -11,7 +11,7 @@
         >{{ inputContentLabel }}</VTextArea
       >
 
-      <VInput v-model="url" placeholder="Put your file url here" class="file-form__form-input">{{
+      <VInput v-model="url" placeholder="Put your image url here" class="file-form__form-input">{{
         inputUrlLabel
       }}</VInput>
     </form>
@@ -36,7 +36,7 @@ const url = ref(props.file?.url)
 
 const inputTitleLabel = 'File title'
 const inputContentLabel = 'File content'
-const inputUrlLabel = 'File url'
+const inputUrlLabel = 'File image'
 
 const sendForm = () => {
   emit('send', { id: props.file?.id, name: name.value, content: content.value, url: url.value })
