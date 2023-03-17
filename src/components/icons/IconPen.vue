@@ -29,6 +29,8 @@
   </svg>
 </template>
 
-<script setup></script>
+<script setup>
+//Svg recovered on https://commons.wikimedia.org/
+</script>
 
 <style lang="scss"></style>

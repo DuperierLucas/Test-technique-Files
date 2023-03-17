@@ -13,12 +13,15 @@ $secondary-color: #2272a4;
 
 $red: #ed5e68;
 
+//box-shadow used for card
 $primary-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 $secondary-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+//z-index to display modals
 $zModal: 19;
 $zModalOverlay: 18;
 
+//Commun break points
 $break--mobile: 414px;
 $break--tablet-p: 768px;
 $break--tablet-l: 1024px;

@@ -1,7 +1,11 @@
 {
   "name": "test-front",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "author": {
+    "name": "Duperier Lucas",
+    "url": "https://github.com/DuperierLucas/"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

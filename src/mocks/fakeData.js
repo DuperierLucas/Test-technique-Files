@@ -1,3 +1,6 @@
+//You can add more fake data here. Press the button in the backoffice to recover these data.
+//Picture took on https://upload.wikimedia.org/wikipedia
+
 export const fileList = [
   {
     id: 1,

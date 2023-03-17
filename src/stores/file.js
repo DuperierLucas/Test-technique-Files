@@ -3,8 +3,13 @@ import { defineStore } from 'pinia'
 export const useFile = defineStore({
   id: 'file',
   state: () => ({
+    //In the backoffice, it's the selected tab item
     currentFileOption: 'Create',
+
+    //Recover list from the localstorage
     fileList: JSON.parse(localStorage.getItem('files')),
+
+    //Set the selected file in the list
     currentSelectedFile: null
   }),
 
