@@ -19,7 +19,7 @@
 
 <script setup>
 import { useFile } from '@/stores/file'
-import { computed } from 'vue'
+import { computed, onUnmounted } from 'vue'
 
 import { fileList } from '@/mocks/fakeData'
 
@@ -44,6 +44,8 @@ const loadFakeData = () => {
   localStorage.setItem('files', JSON.stringify(fileList))
   location.reload()
 }
+
+onUnmounted(() => file.SET_CURRENT_FILE_OPTION('Create'))
 </script>
 
 <style lang="scss" scoped>
