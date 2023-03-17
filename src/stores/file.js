@@ -47,6 +47,7 @@ export const useFile = defineStore({
 
       files[fileIndex] = updatedFile
 
+      this.SET_CURRENT_SELECTED_FILE(files[0])
       localStorage.setItem('files', JSON.stringify(files))
     },
     DELETE_FILE(deletedFile) {
@@ -55,6 +56,7 @@ export const useFile = defineStore({
 
       files.splice(fileIndex, 1)
 
+      this.SET_CURRENT_SELECTED_FILE(files[0])
       localStorage.setItem('files', JSON.stringify(files))
     }
   }
