@@ -1,6 +1,6 @@
 <template>
   <div class="file-option-delete">
-    <div class="file-option-delete__list">
+    <div class="file-option-delete__list" v-if="file.getFileList.length > 0">
       <FileCard
         v-for="(item, index) in file.getFileList"
         :key="index"
@@ -11,6 +11,8 @@
         ><IconTrash class="file-option-delete__list-item-icon"
       /></FileCard>
     </div>
+
+    <VEmptyList v-else :message="emptyList" />
 
     <VModal :isDisplayed="isModalDisplayed" @modal-toggle="isModalDisplayed = false">
       <div class="file-option-delete__form">
@@ -44,6 +46,7 @@ import IconTrash from '@/components/icons/IconTrash.vue'
 
 import VModal from '@/components/shared/VModal.vue'
 import VButton from '@/components/shared/VButton.vue'
+import VEmptyList from '@/components/shared/VEmptyList.vue'
 
 const file = useFile()
 
@@ -53,6 +56,8 @@ const fileToDelete = ref(null)
 const formTitle = 'You want to delete'
 const formCancelButton = 'Cancel'
 const formDeleteButton = 'Delete'
+const emptyList =
+  'Your file list is empty :(. You can create a file using the form. Or you can press the reset button to load fake data.'
 
 const deleteFile = (deletedFile) => {
   file.DELETE_FILE(deletedFile)

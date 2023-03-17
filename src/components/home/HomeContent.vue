@@ -3,6 +3,7 @@
     <div class="home-content__image">
       <img :src="currentSelectedFile?.url" alt="Image file" />
     </div>
+
     <h2>{{ currentSelectedFile?.name }}</h2>
     <div class="home-content__text">{{ currentSelectedFile?.content }}</div>
   </div>

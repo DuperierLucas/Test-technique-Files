@@ -10,7 +10,7 @@
       />
     </template>
 
-    <div v-else class="home-list__empty">{{ emptyList }}</div>
+    <VEmptyList v-else :message="emptyList" />
   </div>
 </template>
 
@@ -18,6 +18,8 @@
 import { computed } from 'vue'
 
 import HomeListItem from '@/components/home/HomeListItem.vue'
+
+import VEmptyList from '@/components/shared/VEmptyList.vue'
 
 import { useFile } from '@/stores/file'
 
@@ -40,14 +42,5 @@ const currentSelectedFile = computed(() => {
 
   width: 100%;
   height: 80vh;
-}
-
-.home-list__empty {
-  @media (min-width: $break--tablet-l) {
-    max-width: 200px;
-  }
-
-  text-align: center;
-  width: 100%;
 }
 </style>

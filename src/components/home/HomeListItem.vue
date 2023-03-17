@@ -27,8 +27,6 @@ const props = defineProps({
     width: 200px;
   }
 
-  // width: calc(100vw - 32px); //Padding + border
-
   padding: 5px 15px;
   cursor: pointer;
   background-color: $grey3;

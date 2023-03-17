@@ -1,6 +1,6 @@
 <template>
   <div class="file-option-update">
-    <div class="file-option-update__list">
+    <div class="file-option-update__list" v-if="file.getFileList.length > 0">
       <FileCard
         v-for="(item, index) in file.getFileList"
         :key="index"
@@ -11,6 +11,8 @@
         ><IconPen class="file-option-update__list-item-icon" />
       </FileCard>
     </div>
+
+    <VEmptyList v-else :message="emptyList" />
 
     <VModal :isDisplayed="isModalDisplayed" @modal-toggle="isModalDisplayed = false">
       <div class="file-option-update__form">
@@ -31,12 +33,15 @@ import FileForm from '@/components/file/FileForm.vue'
 import IconPen from '@/components/icons/IconPen.vue'
 
 import VModal from '@/components/shared/VModal.vue'
+import VEmptyList from '@/components/shared/VEmptyList.vue'
 
 const file = useFile()
 
 const isModalDisplayed = ref(false)
 const fileToUpdate = ref(null)
 const formTitle = 'Updating'
+const emptyList =
+  'Your file list is empty :(. You can create a file using the form. Or you can press the reset button to load fake data.'
 
 const updateFile = (updatedFile) => {
   file.UPDATE_FILE(updatedFile)
