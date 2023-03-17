@@ -1,0 +1,14 @@
+@mixin modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: $white;
+  border-radius: 15px;
+
+  overflow: auto;
+
+  width: 500px;
+  max-height: 50vh;
+}
