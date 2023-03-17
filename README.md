@@ -18,7 +18,7 @@ http://localhost:8080/
 
 Voici mon rendu pour le test technique. Comme le poste proposé est 100% Front-End, j'ai créé le backoffice en VueJs.
 
-Les data sont stockés dans le localstorage. Néanmoins, toutes les actions sont réalisable depuis l'interface.
+Les data sont stockés dans le localstorage. Néanmoins, toutes les actions sont réalisables depuis l'interface.
 
 Pour accèder au backoffice, il faut emprunter la route http://localhost:8080/backoffice.
 
